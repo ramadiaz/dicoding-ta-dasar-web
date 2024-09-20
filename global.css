@@ -7,6 +7,19 @@ body {
   min-height: 100vh;
 }
 
+body.light-mode {
+    background-color: #e5e5cb;
+    color: #3c2a21;
+    border-color: #3c2a21;
+  }
+  
+  body.dark-mode {
+    background-color: #3c2a21;
+    color: #e5e5cb;
+    border-color: #e5e5cb;
+  }
+  
+
 header {
   width: 40%;
   margin: 0 auto;
@@ -28,7 +41,6 @@ header {
 .underline {
   border-width: 0px;
   border-top-width: 1px;
-  border-color: #3c2a21;
   border-style: solid;
   width: 100%;
 }
@@ -105,4 +117,19 @@ footer {
 
 .font-sm {
     font-size: 0.9rem;
+}
+
+.fixed-top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.bg-transparent {
+    background-color: transparent;
+    content: "./public/icon/daynight-icon.png";
+}
+
+.border-0 {
+    border-width: 0px;
 }
