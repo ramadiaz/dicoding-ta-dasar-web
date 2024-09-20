@@ -8,19 +8,20 @@ body {
 }
 
 body.light-mode {
-    background-color: #e5e5cb;
-    color: #3c2a21;
-    border-color: #3c2a21;
-  }
-  
-  body.dark-mode {
-    background-color: #3c2a21;
-    color: #e5e5cb;
-    border-color: #e5e5cb;
-  }
-  
+  background-color: #e5e5cb;
+  color: #3c2a21;
+  border-color: #3c2a21;
+}
 
-header {
+body.dark-mode {
+  background-color: #3c2a21;
+  color: #e5e5cb;
+  border-color: #e5e5cb;
+}
+
+header,
+main,
+footer {
   width: 40%;
   margin: 0 auto;
 }
@@ -45,13 +46,15 @@ header {
   width: 100%;
 }
 
-main {
-  width: 40%;
-  margin: 20px auto;
-}
-
 article {
   font-size: 1rem;
+}
+
+.starter-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .flex-row {
@@ -71,14 +74,9 @@ article {
 
 img {
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
 footer {
-  width: 40%;
   margin: 80px auto;
 }
 
@@ -96,10 +94,6 @@ footer {
 
 .rounded-full {
   border-radius: 999px;
-  -webkit-border-radius: 999px;
-  -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
 }
 
 .items-center {
@@ -116,20 +110,35 @@ footer {
 }
 
 .font-sm {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .fixed-top-right {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 .bg-transparent {
-    background-color: transparent;
-    content: "./public/icon/daynight-icon.png";
+  background-color: transparent;
 }
 
 .border-0 {
-    border-width: 0px;
+  border-width: 0px;
+}
+
+@media (max-width: 768px) {
+  header,
+  main,
+  footer {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .starter-content {
+    flex-direction: column-reverse;
+  }
 }
